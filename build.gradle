@@ -1,0 +1,20 @@
+import groovy.transform.Field
+
+repositories {
+    mavenCentral()
+}
+
+apply plugin: 'war'
+
+
+dependencies {
+    compile "org.springframework:spring-webmvc:4.3.6.RELEASE"
+//    compile "javax.servlet:jstl:1.2"
+    providedCompile "javax.servlet:javax.servlet-api:3.1.0"
+//    providedCompile "javax.servlet.jsp:jsp-api:2.0"
+//    providedCompile "javax.el:javax.el-api:3.0.0"
+}
+
+war {
+    baseName = 'prediction'
+}
